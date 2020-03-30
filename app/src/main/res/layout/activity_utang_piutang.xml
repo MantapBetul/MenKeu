@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorAbu"
         android:layout_marginBottom="5dp"
         android:orientation="horizontal"
@@ -18,76 +18,64 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="13dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="13dp">
+            <TextView
+                android:id="@+id/piutang"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textColor="#000"
+                android:layout_alignParentLeft="true"
+                android:text="Piutang"
+                android:textSize="15dp" />
+            <TextView
+                android:id="@+id/jmlPiutang"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:textColor="#000"
+                android:text="Rp. 2.000.000"
+                android:layout_alignParentRight="true"
+                android:textSize="15dp" />
+            <TextView
+                android:id="@+id/utang"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/piutang"
+                android:textColor="#000"
+                android:text="Utang"
+                android:textSize="15dp" />
             <TextView
                 android:id="@+id/cashin"
                 android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginBottom="10dp"
-                android:text="Cash In"
-                android:layout_alignParentLeft="true"
+                android:layout_height="40dp"
+                android:text="Rp. 50.000"
+                android:layout_below="@id/jmlPiutang"
                 android:textColor="#000"
+                android:layout_alignParentRight="true"
                 android:textSize="15dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:height="30dp"
-                android:text="Rp 2.000.000"
-                android:textColor="#000"
-                android:layout_alignParentRight="true"
-                android:textSize="15dp"/>
-            <TextView
-                android:id="@+id/cashout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:height="30dp"
-                android:text="Cash Out"
-                android:textColor="#000"
-                android:layout_below="@id/cashin"
-                android:layout_alignParentLeft="true"
-                android:textSize="15dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:height="30dp"
-                android:text="Rp 50.000"
-                android:textColor="#000"
-                android:layout_below="@id/cashin"
-                android:layout_alignParentRight="true"
-                android:textSize="15dp"/>
-
             <View
                 android:id="@+id/garis"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_above="@+id/balance"
+                android:layout_below="@id/utang"
                 android:layout_marginBottom="25dp"
                 android:background="@android:color/black" />
-            <TextView
-                android:id="@+id/balance"
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/garis"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:backgroundTint="#000"
+                android:hint="Masukkan nama"/>
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:width="100dp"
-                android:height="30dp"
-                android:text="Balanced"
-                android:textColor="#000"
-                android:layout_alignParentBottom="true"
-                android:textSize="15dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:width="100dp"
-                android:height="30dp"
-                android:text="Rp 1.950.000"
-                android:textColor="#000"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentRight="true"
-                android:textSize="15dp"/>
-
+                android:layout_below="@id/garis"
+                android:layout_marginRight="10dp"
+                android:text="Cari"/>
         </RelativeLayout>
 
     </RelativeLayout>
